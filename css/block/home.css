@@ -1,0 +1,90 @@
+/* Main/home css */
+/* Styles for desktop devices */
+
+.home {
+  padding: 175px 0;
+  min-height: 895px;
+  position: relative;
+}
+
+.home__content {
+  max-width: 440px;
+}
+
+.home__heading {
+  font-family: "Georgia", serif;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 74px;
+  color: #01996d;
+  margin-bottom: 30px;
+}
+
+/* 
+Если необходим отступ если контента станет больше, 
+то рекомендуется:
+.home__heading + * {
+margin-top: 30px;
+} 
+*/
+
+.home__text {
+  line-height: 144.5%;
+  color: #484848;
+}
+
+/* Отступ от кнопки до текста 
+.home__text + * {
+  margin-top: 53px;
+}
+*/
+
+.home__button {
+  margin-top: 53px;
+}
+
+.home__bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: -1;
+}
+
+.home__bg-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Styles for desktop devices //end */
+
+/* Styles for mobile devices */
+/* 991px */
+@media (max-width: 991px) {
+  .home__bg-img img {
+    opacity: 0.5;
+  }
+
+  .home {
+    padding: 40px 0;
+    min-height: unset;
+  }
+
+  .home__bg-img {
+    background-color: rgb(250, 241, 229);
+  }
+
+  .home__heading {
+    font-size: 45px;
+    line-height: 1.2;
+  }
+  
+  .home__button {
+    margin-top: 30px;
+  }
+}
+
+/* Styles for mobile devices //end */

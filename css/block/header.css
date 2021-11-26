@@ -1,0 +1,101 @@
+/* Header css */
+/* Styles for desktop devices */
+
+.header {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.header__row {
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+}
+
+.header__nav {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-left: 172px;
+  color: #292929;
+}
+
+.header__nav-list {
+  display: flex;
+}
+
+/* Варианты отступов в пунктах меню */
+/* Вариант 1 
+  .header__nav-list li {
+	margin-right: 71px;
+}
+
+.header__nav-list li:last-child {
+  margin-right: 0;
+}*/
+
+/* Вариант 2 
+  .header__nav-list li:not(:last-child) {
+  margin-right: 71px;
+}*/
+
+/* Вариант 3 */
+.header__nav-list li + li {
+  margin-left: 71px;
+}
+
+.header__nav-list a {
+  transition: color 0.2s ease;
+}
+
+.header__nav-list a:hover {
+  color: #01996d;
+}
+
+.header__login {
+  margin-left: auto;
+}
+
+.header__login-link {
+  color: #000;
+  transition: color 0.2s ease;
+}
+
+.header__login-link:hover {
+  color: #01996d;
+}
+
+/* Styles for desktop devices //end */
+
+
+/* Styles for mobile devices */
+
+/* 1199px */
+@media (max-width: 1199px) {
+  .header__row {
+    justify-content: space-between;
+  }
+
+  .header__nav {
+    margin-left: 30px;
+  }
+
+  .header__nav-list li + li {
+    margin-left: 50px;
+  }
+  
+  .header__login {
+    margin-left: 30px;
+  }
+}
+
+/* 991px */
+@media (max-width: 991px) {
+  .header__nav,
+  .header__login {
+    display: none;
+  }
+}
+
+/* Styles for mobile devices //end */

@@ -1,0 +1,82 @@
+/* Кнопки сайта */
+/* Styles for desktop devices */
+
+/* Обычна кнопка в header */
+.button,
+a.button {
+  height: 51px;
+  line-height: 51px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #01996d;
+  border: 1px solid #01996d;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+}
+/* 1. Если не предусматривается изменение текста, то текст в кнопке можно выровнить так: 
+.button,
+a.button {
+height: 51px;
+line-height: 51px;
+}
+
+2. Если же текст в кнопке будет изменяться (станет больше), то так:
+.button,
+a.button {
+min-height: 51px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+но при этом необходимо указать: 
+.header__login {
+  display: flex;
+  align-items: center;
+*/
+
+.button:hover,
+a.button:hover {
+  opacity: 0.8s;
+  color: #fff;
+}
+
+/* Выбрать любой элемент на первом уровне и задать отступ влево. Если бы в классе .header__login был тег <span>, то он был бы вторым уровнем */
+.header__login > * + * {
+  margin-left: 35px;
+}
+
+/* Большая кнопка в Main */
+.button-big,
+a.button-big {
+  min-height: 65px;
+  line-height: 65px;
+}
+
+.story__video-button img {
+  width: 82px;
+  height: 82px;
+}
+/* Styles for desktop devices //end */
+
+/* Styles for mobile devices */
+/* 991px */
+@media (max-width: 991px) {
+  .button,
+  a.button {
+    min-height: 41px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .button-big,
+  a.button-big {
+    min-height: 55px;
+    line-height: 55px;
+  }
+}
+
+/* Styles for mobile devices //end */

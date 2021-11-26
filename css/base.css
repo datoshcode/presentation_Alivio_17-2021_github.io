@@ -1,0 +1,56 @@
+/* Base style */
+/* Styles for desktop devices */
+.container {
+  width: 1400px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-wide {
+  width: 1536px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #424242;
+  line-height: 150%;
+}
+
+/* Styles for desktop devices //end */
+
+/* Styles for mobile devices */
+
+/* Чтобы после верстки десктопной версии сайта, побыстрому просмотреть его на мобильном, то необходимо:
+1. закоментировать в index.html строку:
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+2. в файле css, селектора body, указать свойство min-width: 1600px;  */
+
+/* 1535px */
+@media (max-width: 1535px) {
+  .container-wide {
+    width: 100%;
+  }
+}
+
+/* 1399px */
+@media (max-width: 1399px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* 991px */
+@media (max-width: 991px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+/* Styles for mobile devices //end */ ;
